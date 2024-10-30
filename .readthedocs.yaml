@@ -1,0 +1,13 @@
+# .readthedocs.yaml
+
+version: 2
+
+# Build documentation with Sphinx
+sphinx:
+  configuration: docs/conf.py
+
+# Specify the Python version and dependencies
+python:
+  version: "3.9"
+  install:
+    - requirements: docs/requirements.txt
