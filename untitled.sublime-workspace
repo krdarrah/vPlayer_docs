@@ -1,0 +1,411 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "docs/index.rst",
+			"settings":
+			{
+				"buffer_size": 409,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					9,
+					1,
+					"left_delete",
+					null,
+					"AQAAANoAAAAAAAAA2gAAAAAAAAAjAAAAV2VsY29tZSB0byB2UGxheWVyJ3MgZG9jdW1lbnRhdGlvbiE",
+					"AQAAAAAAAAABAAAA/QAAAAAAAADaAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					10,
+					1,
+					"insert",
+					{
+						"characters": "vPlayer"
+					},
+					"BwAAANoAAAAAAAAA2wAAAAAAAAAAAAAA2wAAAAAAAADcAAAAAAAAAAAAAADcAAAAAAAAAN0AAAAAAAAAAAAAAN0AAAAAAAAA3gAAAAAAAAAAAAAA3gAAAAAAAADfAAAAAAAAAAAAAADfAAAAAAAAAOAAAAAAAAAAAAAAAOAAAAAAAAAA4QAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA2gAAAAAAAADaAAAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"Install Package Control",
+				"Install Package Control"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+	],
+	"file_history":
+	[
+		"/Users/kevindarrah/Documents/readthedocs/vPlayer/docs/requirements.txt",
+		"/Users/kevindarrah/Documents/readthedocs/vPlayer/docs/Makefile",
+		"/Users/kevindarrah/Documents/readthedocs/vPlayer/docs/make.bat",
+		"/Users/kevindarrah/Documents/readthedocs/vPlayer/docs/conf.py",
+		"/Users/kevindarrah/Documents/readthedocs/vPlayer/docs/_static/custom.css",
+		"/Users/kevindarrah/Documents/readthedocs/cheatsheet",
+		"/Users/kevindarrah/Documents/EAGLE/toolCheats.txt",
+		"/Users/kevindarrah/Downloads/test.png",
+		"/Volumes/UNTITLED 1/settings.txt",
+		"/Users/kevindarrah/Downloads/SeeedStudio-XIAO-ESP32S3-Sense-camera-main/record_video_decorder/ESP32-CAM_MJPEG2SD/webServer.cpp",
+		"/Users/kevindarrah/Downloads/SeeedStudio-XIAO-ESP32S3-Sense-camera-main/record_video_decorder/ESP32-CAM_MJPEG2SD/utilsFS.cpp",
+		"/Users/kevindarrah/Downloads/SeeedStudio-XIAO-ESP32S3-Sense-camera-main/record_video_decorder/ESP32-CAM_MJPEG2SD/utils.cpp",
+		"/Users/kevindarrah/Downloads/SeeedStudio-XIAO-ESP32S3-Sense-camera-main/record_video_decorder/ESP32-CAM_MJPEG2SD/uart.cpp",
+		"/Users/kevindarrah/Downloads/SeeedStudio-XIAO-ESP32S3-Sense-camera-main/record_video_decorder/ESP32-CAM_MJPEG2SD/telemetry.cpp",
+		"/Users/kevindarrah/Downloads/SeeedStudio-XIAO-ESP32S3-Sense-camera-main/record_video_decorder/ESP32-CAM_MJPEG2SD/telegram.cpp",
+		"/Users/kevindarrah/Downloads/SeeedStudio-XIAO-ESP32S3-Sense-camera-main/record_video_decorder/ESP32-CAM_MJPEG2SD/streamServer.cpp",
+		"/Users/kevindarrah/Downloads/SeeedStudio-XIAO-ESP32S3-Sense-camera-main/record_video_decorder/ESP32-CAM_MJPEG2SD/smtp.cpp",
+		"/Users/kevindarrah/Downloads/SeeedStudio-XIAO-ESP32S3-Sense-camera-main/record_video_decorder/ESP32-CAM_MJPEG2SD/setupAssist.cpp",
+		"/Users/kevindarrah/Downloads/SeeedStudio-XIAO-ESP32S3-Sense-camera-main/record_video_decorder/ESP32-CAM_MJPEG2SD/README.md",
+		"/Users/kevindarrah/Downloads/SeeedStudio-XIAO-ESP32S3-Sense-camera-main/record_video_decorder/ESP32-CAM_MJPEG2SD/prefs.cpp",
+		"/Users/kevindarrah/Downloads/SeeedStudio-XIAO-ESP32S3-Sense-camera-main/record_video_decorder/ESP32-CAM_MJPEG2SD/peripherals.cpp",
+		"/Users/kevindarrah/Downloads/SeeedStudio-XIAO-ESP32S3-Sense-camera-main/record_video_decorder/ESP32-CAM_MJPEG2SD/mqtt.cpp",
+		"/Users/kevindarrah/Downloads/SeeedStudio-XIAO-ESP32S3-Sense-camera-main/record_video_decorder/ESP32-CAM_MJPEG2SD/motionDetect.cpp",
+		"/Users/kevindarrah/Downloads/SeeedStudio-XIAO-ESP32S3-Sense-camera-main/record_video_decorder/ESP32-CAM_MJPEG2SD/mjpeg2sd.cpp",
+		"/Users/kevindarrah/Downloads/SeeedStudio-XIAO-ESP32S3-Sense-camera-main/record_video_decorder/ESP32-CAM_MJPEG2SD/mic.cpp",
+		"/Users/kevindarrah/Downloads/SeeedStudio-XIAO-ESP32S3-Sense-camera-main/record_video_decorder/ESP32-CAM_MJPEG2SD/globals.h",
+		"/Users/kevindarrah/Downloads/SeeedStudio-XIAO-ESP32S3-Sense-camera-main/record_video_decorder/ESP32-CAM_MJPEG2SD/ftp.cpp",
+		"/Users/kevindarrah/Downloads/SeeedStudio-XIAO-ESP32S3-Sense-camera-main/record_video_decorder/ESP32-CAM_MJPEG2SD/ESP32-CAM_MJPEG2SD.ino",
+		"/Users/kevindarrah/Downloads/SeeedStudio-XIAO-ESP32S3-Sense-camera-main/record_video_decorder/ESP32-CAM_MJPEG2SD/data/MJPEG2SD.htm",
+		"/Users/kevindarrah/Downloads/SeeedStudio-XIAO-ESP32S3-Sense-camera-main/record_video_decorder/ESP32-CAM_MJPEG2SD/data/common.js",
+		"/Users/kevindarrah/Downloads/SeeedStudio-XIAO-ESP32S3-Sense-camera-main/record_video_decorder/ESP32-CAM_MJPEG2SD/certificates.cpp",
+		"/Users/kevindarrah/Downloads/SeeedStudio-XIAO-ESP32S3-Sense-camera-main/record_video_decorder/ESP32-CAM_MJPEG2SD/camera_pins.h",
+		"/Users/kevindarrah/Downloads/SeeedStudio-XIAO-ESP32S3-Sense-camera-main/record_video_decorder/ESP32-CAM_MJPEG2SD/avi.cpp",
+		"/Users/kevindarrah/Downloads/SeeedStudio-XIAO-ESP32S3-Sense-camera-main/record_video_decorder/ESP32-CAM_MJPEG2SD/appSpecific.cpp",
+		"/Users/kevindarrah/Downloads/SeeedStudio-XIAO-ESP32S3-Sense-camera-main/record_video_decorder/ESP32-CAM_MJPEG2SD/appGlobals.h",
+		"/Users/kevindarrah/Downloads/orbitdisplay.aspx",
+		"/Users/kevindarrah/Documents/Arduino/vPlayer_Trafffic/arch/working",
+		"/Users/kevindarrah/Documents/EAGLE/projects/videoPlayer/videoPlayer_v1.0/3Dlink.txt",
+		"/Users/kevindarrah/Downloads/Iceland_Regular14pt7b.h",
+		"/Users/kevindarrah/Downloads/Iceland_Regular10pt7b.h",
+		"/Users/kevindarrah/Downloads/Iceland_Regular20pt7b.h",
+		"/Users/kevindarrah/Documents/Arduino/libraries/ESP32_JPEG/examples/DecodeTest/DecodeTest.ino",
+		"/Users/kevindarrah/Documents/Arduino/libraries/CST816S/CST816S.h",
+		"/Users/kevindarrah/Documents/Arduino/libraries/CST816S/CST816S.cpp",
+		"/Users/kevindarrah/Downloads/vPlayer_10_4_24_v2.ino",
+		"/Users/kevindarrah/Documents/Electron/vPlayerConverterJS/preload.js",
+		"/Users/kevindarrah/Documents/Electron/vPlayerConverterJS/package.json",
+		"/Users/kevindarrah/Documents/Electron/vPlayerConverterJS/main.js",
+		"/Users/kevindarrah/Documents/Arduino/vPlayer_10_4_24/ffmpegTesting",
+		"/Users/kevindarrah/Documents/Electron/vPlayerConverterJS/index.html",
+		"/Users/kevindarrah/Documents/Electron/archive/vPlayerConverterJS/index.html",
+		"/Users/kevindarrah/Documents/Electron/vPlayerConverterJS/videoConvert5js.js",
+		"/Users/kevindarrah/Documents/Electron/vPlayerConverterJS/renderer.js",
+		"/Users/kevindarrah/Documents/Arduino/SD_MJPEG_videoTest/ffmpegTesting",
+		"/Users/kevindarrah/Documents/Electron/trigUpdater/package-lock.json",
+		"/Users/kevindarrah/Documents/Processing/videoConvert5js/videoConvert5js.js",
+		"/Users/kevindarrah/Documents/Processing/videoConvert5js/index.html",
+		"/Users/kevindarrah/Documents/EAGLE/projects/videoPlayer/3Dlink.txt",
+		"/Users/kevindarrah/Documents/Arduino/libraries/cst816t/src/cst816t.h",
+		"/Users/kevindarrah/Documents/Arduino/libraries/cst816t/src/cst816t.cpp",
+		"/Users/kevindarrah/Documents/EAGLE/projects/FargoEngineeringInc/ESP32IOBoard/3dmodel.txt",
+		"/Users/kevindarrah/Documents/EAGLE/projects/Guitammer/TCG006-3/Core/Src/main.c",
+		"/Users/kevindarrah/Documents/EAGLE/projects/Guitammer/TCG006-3/TGC006.ioc",
+		"/Users/kevindarrah/Documents/EAGLE/projects/Guitammer/Ux_Device_CDC_ACM/Core/Src/app_threadx.c",
+		"/Users/kevindarrah/Documents/EAGLE/projects/Guitammer/Ux_Device_CDC_ACM/Core/Inc/main.h",
+		"/Users/kevindarrah/Documents/EAGLE/projects/Guitammer/Ux_Device_CDC_ACM/Core/Src/stm32h5xx_hal_timebase_tim.c",
+		"/Users/kevindarrah/Documents/EAGLE/projects/Guitammer/Ux_Device_CDC_ACM/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_tim.c",
+		"/Users/kevindarrah/Documents/EAGLE/projects/Guitammer/Ux_Device_CDC_ACM/Core/Src/main.c",
+		"/Users/kevindarrah/Documents/EAGLE/projects/Guitammer/Ux_Device_CDC_ACM/Ux_Device_CDC_ACM.ioc",
+		"/Users/kevindarrah/Documents/EAGLE/projects/Guitammer/Ux_Device_CDC_ACM/README.md",
+		"/Users/kevindarrah/Documents/EAGLE/projects/Guitammer/Ux_Device_CDC_ACM/readme.html",
+		"/Users/kevindarrah/Downloads/Fallout-4-Pip-Boy-app-Start-Up-Animation-for-screen-saver.mjpeg.avi",
+		"/Users/kevindarrah/Downloads/220_30fps.mjpeg",
+		"/Users/kevindarrah/Downloads/TCG006-2/App/inc/pwm_handler.h",
+		"/Users/kevindarrah/Downloads/TCG006-2/Core/Src/main.c",
+		"/Users/kevindarrah/Downloads/TCG006-2/App/src/pwm_handler.c",
+		"/Users/kevindarrah/Downloads/TCG006-2/Core/Src/tim.c",
+		"/Users/kevindarrah/Downloads/TCG006-2/Core/Inc/stm32h5xx_hal_conf.h",
+		"/Users/kevindarrah/Downloads/TCG006-2/Core/Src/system_stm32h5xx.c",
+		"/Users/kevindarrah/Downloads/TCG006-2/TGC006.ioc",
+		"/Users/kevindarrah/Downloads/1.69inch_Touch_LCD_ESP32S3/1.69inch_Touch_LCD_ESP32S3/src/lvgl/lvgl.h",
+		"/Users/kevindarrah/Downloads/1.69inch_Touch_LCD_ESP32S3/1.69inch_Touch_LCD_ESP32S3/src/Readme_EN.txt",
+		"/Users/kevindarrah/Documents/EAGLE/projects/BikeStand/Bike_Stands_SensorInterface_v1.0_RELEASE/3dlink.txt",
+		"/Users/kevindarrah/Downloads/BYOK Product Guidelines.txt",
+		"/Users/kevindarrah/Library/Arduino15/packages/esp32/hardware/esp32/2.0.14/boards.txt",
+		"/Users/kevindarrah/Documents/Arduino/Lumenier_ESP32programmer_V2_RID_NDAAVERSION/FactoryProg/forESP32S3_devKit/forSD/config.txt",
+		"/Users/kevindarrah/Documents/Arduino/Lumenier_ESP32programmer_V2_RID_NDAAVERSION/FactoryProg/forESP32Programmer/config.txt",
+		"/Users/kevindarrah/Downloads/Ux_Device_CDC_ACM/AZURE_RTOS/App/app_azure_rtos.c",
+		"/Users/kevindarrah/Downloads/Ux_Device_CDC_ACM/USBX/App/ux_device_cdc_acm.c",
+		"/Users/kevindarrah/Downloads/Ux_Device_CDC_ACM/Middlewares/ST/usbx/common/core/inc/ux_api.h",
+		"/Users/kevindarrah/Downloads/Ux_Device_CDC_ACM/Drivers/CMSIS/Device/ST/STM32H5xx/Include/stm32h503xx.h",
+		"/Users/kevindarrah/Downloads/Ux_Device_CDC_ACM/Drivers/STM32H5xx_HAL_Driver/Inc/stm32h5xx_ll_usb.h",
+		"/Users/kevindarrah/Downloads/Ux_Device_CDC_ACM/Ux_Device_CDC_ACM.ioc",
+		"/Users/kevindarrah/Downloads/Ux_Device_CDC_ACM/STM32CubeIDE/Ux_Device_CDC_ACM Debug.launch",
+		"/Users/kevindarrah/Downloads/Ux_Device_CDC_ACM/STM32CubeIDE/STM32H503RBTX_FLASH.ld",
+		"/Users/kevindarrah/Downloads/Ux_Device_CDC_ACM/README.md",
+		"/Users/kevindarrah/Downloads/Ux_Device_CDC_ACM/readme.html",
+		"/Users/kevindarrah/Documents/EAGLE/projects/Grimmius/Grimmius_Control_V1.0_RELEASE/3Dlink.txt",
+		"/Users/kevindarrah/Documents/EAGLE/projects/FargoEngineeringInc/ESP32IOBoard/ESP32_IO_V2.0.brd",
+		"/Users/kevindarrah/Documents/EAGLE/projects/FargoEngineeringInc/ESP32IOBoard/ESP32_IO_V2.0.sch",
+		"/Users/kevindarrah/Documents/EAGLE/projects/Guitammer/Guitammer_KM50_v1.0_RELEASE/3dlink.txt",
+		"/Users/kevindarrah/Downloads/TCG006/Core/Inc/memorymap.h",
+		"/Users/kevindarrah/Downloads/TCG006/Core/Inc/main.h",
+		"/Users/kevindarrah/Downloads/TCG006/Core/Inc/icache.h",
+		"/Users/kevindarrah/Downloads/TCG006/Core/Inc/gpio.h",
+		"/Users/kevindarrah/Downloads/TCG006/Core/Inc/gpdma.h",
+		"/Users/kevindarrah/Downloads/TCG006/Core/Inc/app_threadx.h",
+		"/Users/kevindarrah/Downloads/TCG006/Core/Inc/adc.h",
+		"/Users/kevindarrah/Downloads/TCG006/AZURE_RTOS/App/app_azure_rtos.h",
+		"/Users/kevindarrah/Downloads/TCG006/AZURE_RTOS/App/app_azure_rtos.c",
+		"/Users/kevindarrah/Downloads/TCG006/AZURE_RTOS/App/app_azure_rtos_config.h",
+		"/Users/kevindarrah/Downloads/TCG006/App/src/utils.c",
+		"/Users/kevindarrah/Downloads/TCG006/App/src/pwm_handler.c",
+		"/Users/kevindarrah/Downloads/TCG006/App/src/filters.c",
+		"/Users/kevindarrah/Downloads/TCG006/App/src/adc_handler.c",
+		"/Users/kevindarrah/Downloads/TCG006/App/inc/utils.h",
+		"/Users/kevindarrah/Downloads/TCG006/App/inc/pwm_handler.h",
+		"/Users/kevindarrah/Downloads/TCG006/App/inc/filters.h",
+		"/Users/kevindarrah/Downloads/TCG006/App/inc/adc_handler.h",
+		"/Users/kevindarrah/Downloads/TCG006/USBX/App/ux_user.h",
+		"/Users/kevindarrah/Downloads/TCG006/USBX/App/ux_device_descriptors.h",
+		"/Users/kevindarrah/Downloads/TCG006/USBX/App/ux_device_descriptors.c",
+		"/Users/kevindarrah/Downloads/TCG006/USBX/App/ux_device_cdc_acm.h",
+		"/Users/kevindarrah/Downloads/TCG006/USBX/App/ux_device_cdc_acm.c",
+		"/Users/kevindarrah/Downloads/TCG006/USBX/App/app_usbx_device.h",
+		"/Users/kevindarrah/Downloads/TCG006/USBX/App/app_usbx_device.c",
+		"/Users/kevindarrah/Downloads/TCG006/TGC006.ioc",
+		"/Users/kevindarrah/Downloads/TCG006/Middlewares/ST/threadx/LICENSED-HARDWARE.txt"
+	],
+	"find":
+	{
+		"height": 42.0
+	},
+	"find_in_files":
+	{
+		"height": 110.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"path": "/Users/kevindarrah/Documents/readthedocs/vPlayer/docs/_build"
+		},
+		{
+			"path": "/Users/kevindarrah/Documents/readthedocs/vPlayer/docs/_static"
+		},
+		{
+			"path": "/Users/kevindarrah/Documents/readthedocs/vPlayer/docs/_templates"
+		}
+	],
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "docs/index.rst",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 409,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								225,
+								225
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/RestructuredText/reStructuredText.sublime-syntax",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 90.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 108.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.stino_build_panel":
+	{
+		"height": 198.0
+	},
+	"output.stino_panel":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 273.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to vPlayer’s documentation! &mdash; vPlayer v1.0 documentation</title>
+  <title>vPlayer - Ultimate IoT Display &mdash; vPlayer v1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
 
@@ -18,7 +18,8 @@
       <script src="_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Knowledgebase" href="hardware.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -29,8 +30,9 @@
 
           
           
-          <a href="#" class="icon icon-home">
-            vPlayer
+          <a href="#">
+            
+              <img src="_static/logo.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -40,12 +42,11 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <!-- Local TOC -->
-              <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">Welcome to vPlayer’s documentation!</a></li>
-<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="hardware.html">Knowledgebase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="videoPlayer.html">Video Player Project</a></li>
 </ul>
-</div>
+
         </div>
       </div>
     </nav>
@@ -60,7 +61,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Welcome to vPlayer’s documentation!</li>
+      <li class="breadcrumb-item active">vPlayer - Ultimate IoT Display</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -70,24 +71,65 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="welcome-to-vplayer-s-documentation">
-<h1>Welcome to vPlayer’s documentation!<a class="headerlink" href="#welcome-to-vplayer-s-documentation" title="Permalink to this heading"></a></h1>
-<div class="toctree-wrapper compound">
+  <section id="vplayer-ultimate-iot-display">
+<h1>vPlayer - Ultimate IoT Display<a class="headerlink" href="#vplayer-ultimate-iot-display" title="Permalink to this heading"></a></h1>
+<img alt="_images/homeImage.jpg" src="_images/homeImage.jpg" />
+<p><strong>Compact touchscreen ESP32-S3 device with WiFi, Bluetooth, SD card, USB-C, and expansion for video, IoT, and endless creative projects.</strong></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>These docs are still a work in progress. Some sections may be incomplete or subject to change. Updates will be coming daily!!</p>
+</div>
+<p>The vPlayer is the ultimate 1.69” Touch Screen (smart watch sized) ESP32-S3 based video player, IoT device, monitor, live camera feed display, GUI interface controller, or whatever you can dream up that would look cool on your desk! Here are a few examples I have already coded up:</p>
+<p><a class="reference internal" href="videoPlayer.html#video-player-project"><span class="std std-ref">Continuous video player</span></a> take any video files you can think of and it will just play those endlessly from an SD card! This is my go-to for gifts. I have one that is just simple decoration that plays Christmas movie clips… about 100 of them! Also, I have one that plays retro video game play throughs - that’s my favorite! Oh! and for business gifts, I animate their logo or marketing material from their site that plays continuously. NOTE! I have created my own software to convert .mp4 files to mjpeg at the exact resolution and frame rate. See the docs for more info.</p>
+<p><strong>Weather Display</strong> This is pretty much the “Hello World” of IoT displays, but it really is useful to have on the night stand so first thing I see when I get ready for the day is what the hi/lo is for the day and if it’s going to rain… perfect thing for figuring out what to wear! And in my code I also show the forecast for the next day as well, so you know also before bed what it’s lookin like.</p>
+<p><strong>Live Traffic Camera Display - or really any webcam</strong> This one really cool if you can find traffic cameras along your commute. You can basically check road conditions/weather/traffic/etc… at a glance. And it’s so simple to setup, just pop your WiFI credentials and a list of all the traffic cam URLS in a text file - pop that in the SD card and you’re good to go. I also found cameras overlooking Lake Erie (close to me) so can check boating conditions as well. Lots of possibilities with this one… can you imagine creating a grid of vPlayer boards all with this code loaded up?</p>
+<p><strong>Internet Data - API’s</strong> You could go crazy with this one. Any API out there (places for you to get data) you can display on this. Pull down NASA images, Google Earth images, Quote/Joke/Trivia of the Day, or my favorite, the National Debt in USD! Yea and even cooler is that it pulls down the previous day as well and increments or (hopefully - decrements) to the current day’s value. Again, anything you can… maybe the Cat API would be fun? Random images of Cats?</p>
+<p><strong>Computer Control/Monitor</strong> You know we’ve got a USB-C connection on this board? Can receive or send anything you want - so one example I have is an app on the computer that sends CPU stats like Memory/Load/Internet Up/Down. But also, could also send data from the vPlayer as well? Like some kind of interface with buttons to control whatever you can think of. Can even act as an HID device - so mouse/keyboard/joystick.</p>
+<p><strong>Local ESP32-CAM monitor</strong> Yep, we can also receive live feeds from the ESP32 Camera. I’ve one of these setup just to monitor the garage, so at a glance from inside you can see if the garage was left open. Might be nice also to set this up on the front porch, or maybe even make the camera solar powered so it can be a live wildlife camera!</p>
+<iframe width="696" height="522"
+        src="https://www.youtube.com/embed/3d0yMi3bVgc"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe><section id="technical-highlights">
+<h2>Technical Highlights<a class="headerlink" href="#technical-highlights" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Processor</strong>: ESP32-S3 Dual-Core 240MHz, 32-bit with 4MB Flash and 2MB PSRAM.</p></li>
+<li><p><strong>Storage</strong>: Micro SD slot (card included), connected via MMC 4-bit interface.</p></li>
+<li><p><strong>Connectivity</strong>:
+- USB-C for power and data transfer.
+- WiFi and Bluetooth for wireless connectivity.</p></li>
+<li><p><strong>Display</strong>: 1.69” touchscreen (240x280) with P169H002-CTP, ST7789V2 driver, and CST816 touch controller. Includes backlight control.</p></li>
+<li><p><strong>Expansion Options</strong>:
+- JST SH/SR 1mm connectors for UART, I2C, I2S (audio), SPI, and more.
+- Spare IO pads for custom development projects.</p></li>
+<li><p><strong>Open Source Support</strong>: Comes with free examples and continued updates for open-source software.</p></li>
+</ul>
+</section>
+<section id="order-your-vplayer-today">
+<h2>Order Your vPlayer Today!<a class="headerlink" href="#order-your-vplayer-today" title="Permalink to this heading"></a></h2>
+<p><a class="reference external" href="https://www.tindie.com/products/kdcircuits/vplayer-ultimate-iot-display/">https://www.tindie.com/products/kdcircuits/vplayer-ultimate-iot-display/</a></p>
+<p>Start creating your own high-tech projects now!</p>
+<a href="https://www.tindie.com/stores/kdcircuits/?ref=offsite_badges&utm_source=sellers_kdcircuits&utm_medium=badges&utm_campaign=badge_large">
+    <img src="https://d2ss6ovg47m0r5.cloudfront.net/badges/tindie-larges.png"
+         alt="I sell on Tindie"
+         width="200"
+         height="104">
+</a><div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="hardware.html">Knowledgebase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="videoPlayer.html">Video Player Project</a></li>
+</ul>
 </div>
 </section>
-<section id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this heading"></a></h1>
-<ul class="simple">
-<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
-<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
-<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
-</ul>
 </section>
 
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="hardware.html" class="btn btn-neutral float-right" title="Knowledgebase" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 
