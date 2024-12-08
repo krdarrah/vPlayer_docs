@@ -23,5 +23,5 @@ You can download the video converter tool for Windows/Mac from the following lin
 
 .. image:: images/converter.png
 
-Source Code & .bin file
+**Source Code & .bin file**
 `GitHub <https://github.com/krdarrah/vPlayer_VideoPlayer>`_
