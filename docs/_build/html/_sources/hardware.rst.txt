@@ -19,8 +19,9 @@ Power
 Programming
 -------------
 
-- Arduino IDE 2.3.3
-- ESP32 Core Version 2.0.14  (newer will work, but my code was developed with this version)
+- Arduino IDE 2.3.4
+- ESP32 Core Version 3.1.0
+- `Arduino_GFX 1.5.1 <https://github.com/moononournation/Arduino_GFX>`_
 
 **Flash Settings**
 

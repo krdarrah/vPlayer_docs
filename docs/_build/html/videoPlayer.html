@@ -19,6 +19,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="National Debt Tracker" href="nationalDebtTracker.html" />
     <link rel="prev" title="Knowledgebase" href="hardware.html" /> 
 </head>
 
@@ -45,6 +46,7 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="hardware.html">Knowledgebase</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Video Player Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nationalDebtTracker.html">National Debt Tracker</a></li>
 </ul>
 
         </div>
@@ -77,7 +79,7 @@
 <p>This is the code that the board ships with!</p>
 <p>But how to load your own files?</p>
 <p>They need to be a specific format “.mjpeg” - I use ffmpeg for this. Here is the full command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ffmpeg<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;inputPath&quot;</span><span class="w"> </span>-vf<span class="w"> </span><span class="s2">&quot;fps=18,scale=-1:240:flags=lanczos,crop=280:240:(iw-280)/2:0,transpose=1&quot;</span><span class="w"> </span>-q:v<span class="w"> </span><span class="m">4</span><span class="w"> </span>-vcodec<span class="w"> </span>mjpeg<span class="w"> </span>-f<span class="w"> </span>segment<span class="w"> </span>-segment_time<span class="w"> </span><span class="m">1800</span><span class="w"> </span>-reset_timestamps<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="s2">&quot;outputPattern&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ffmpeg<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;inputPath&quot;</span><span class="w"> </span>-vf<span class="w"> </span><span class="s2">&quot;fps=18,scale=-1:240:flags=lanczos,crop=280:240:(iw-280)/2:0,transpose=1&quot;</span><span class="w"> </span>-pix_fmt<span class="w"> </span>yuvj420p<span class="w"> </span>-q:v<span class="w"> </span><span class="m">4</span><span class="w"> </span>-vcodec<span class="w"> </span>mjpeg<span class="w"> </span>-f<span class="w"> </span>segment<span class="w"> </span>-segment_time<span class="w"> </span><span class="m">1800</span><span class="w"> </span>-reset_timestamps<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="s2">&quot;outputPattern&quot;</span>
 </pre></div>
 </div>
 <p>But the good news is that I created a simple app for Windows/Mac to do this automatically. Just place all of your <strong>.mp4</strong> files in a folder, run the app and it will take care of the rest. Copy those .mjpeg files to your SD card.</p>
@@ -93,6 +95,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="hardware.html" class="btn btn-neutral float-left" title="Knowledgebase" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="nationalDebtTracker.html" class="btn btn-neutral float-right" title="National Debt Tracker" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
