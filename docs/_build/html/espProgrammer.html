@@ -1,0 +1,243 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESP32 Programmer &mdash; vPlayer v1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=99a04888"></script>
+      <script src="_static/doctools.js?v=888ff710"></script>
+      <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Traffic/Webcam Viewer" href="webcamViewer.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html">
+            
+              <img src="_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="hardware.html">Knowledgebase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="videoPlayer.html">Video Player Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="videoPlayer_Folder.html">Video Player with Folders Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webcamViewer.html">Traffic/Webcam Viewer</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">ESP32 Programmer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#source-code-and-bin-file">Source Code and bin file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuration-file">Configuration File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#locating-the-offsets">Locating the Offsets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-naming-requirements">File Naming Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#required-files">Required Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-folder-layout">Example Folder Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#connection-basics">Connection Basics</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">vPlayer</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">ESP32 Programmer</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/espProgrammer.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="esp32-programmer">
+<span id="espprogrammer"></span><h1>ESP32 Programmer<a class="headerlink" href="#esp32-programmer" title="Permalink to this heading"></a></h1>
+<p>This guide explains how to use vPlayer as a <strong>standalone flasher</strong> for any ESP32-based board. Since different ESP32 variants (ESP32, ESP32-S2, ESP32-S3, ESP32-C3, etc.) may have unique partition layouts, you can specify <strong>memory offsets</strong> for the bootloader, partition table, firmware, and SPIFFS (or other file systems) in a simple <code class="docutils literal notranslate"><span class="pre">config.txt</span></code> file. vPlayer reads these offsets at startup, ensuring compatibility across multiple boards without recompilation.</p>
+<p>To maintain different firmware sets, create <strong>unique folders</strong> on the SD card—one folder per firmware variant—placing the associated <cite>.bin</cite> files and a matching <code class="docutils literal notranslate"><span class="pre">config.txt</span></code> into each folder.</p>
+<section id="source-code-and-bin-file">
+<h2>Source Code and bin file<a class="headerlink" href="#source-code-and-bin-file" title="Permalink to this heading"></a></h2>
+<p><a class="reference external" href="https://github.com/krdarrah/vPlayer_ESPprogrammer">GitHub</a></p>
+</section>
+<section id="configuration-file">
+<h2>Configuration File<a class="headerlink" href="#configuration-file" title="Permalink to this heading"></a></h2>
+<ol class="arabic">
+<li><p><strong>Create</strong> a file named <code class="docutils literal notranslate"><span class="pre">config.txt</span></code> in your firmware folder.</p></li>
+<li><p><strong>Define</strong> offsets for each component (bootloader, partitions, firmware, etc.):</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>bootloaderNameOffset=0x0
+partitionsNameOffset=0x8000
+bootNameOffset=0xe000
+firmwareNameOffset=0x10000
+spiffsNameOffset=0x10000
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>These values are <strong>example offsets</strong> commonly used for an ESP32-C3.</p></li>
+</ul>
+<p><strong>Example for a Standard ESP32</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>bootNameOffset=0xe000
+bootloaderNameOffset=0x1000
+partitionsNameOffset=0x8000
+firmwareNameOffset=0x10000
+spiffsNameOffset=0x3D0000
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="locating-the-offsets">
+<h2>Locating the Offsets<a class="headerlink" href="#locating-the-offsets" title="Permalink to this heading"></a></h2>
+<p>If you’re compiling and uploading with the Arduino IDE, you can retrieve the exact offsets by <strong>enabling verbose output</strong> (in <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">-&gt;</span> <span class="pre">Preferences</span></code>, check “Verbose Output” for both compile and upload). During the upload process, look for a line similar to:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;/Users/YourName/Library/Arduino15/packages/esp32/tools/esptool_py/4.9.dev3/esptool&quot;</span>
+<span class="w">  </span>--chip<span class="w"> </span>esp32s3<span class="w"> </span>--port<span class="w"> </span><span class="s2">&quot;/dev/cu.usbmodem1412201&quot;</span><span class="w"> </span>--baud<span class="w"> </span><span class="m">921600</span>
+<span class="w">  </span>--before<span class="w"> </span>default_reset<span class="w"> </span>--after<span class="w"> </span>hard_reset<span class="w"> </span>write_flash<span class="w"> </span>-z<span class="w"> </span>--flash_mode<span class="w"> </span>keep<span class="w"> </span>--flash_freq<span class="w"> </span>keep<span class="w"> </span>--flash_size<span class="w"> </span>keep
+<span class="w">  </span>0x0<span class="w"> </span><span class="s2">&quot;/Users/YourName/Library/Caches/arduino/sketches/.../myProject.ino.bootloader.bin&quot;</span>
+<span class="w">  </span>0x8000<span class="w"> </span><span class="s2">&quot;/Users/YourName/Library/Caches/arduino/sketches/.../myProject.ino.partitions.bin&quot;</span>
+<span class="w">  </span>0xe000<span class="w"> </span><span class="s2">&quot;/Users/YourName/Library/Arduino15/packages/esp32/hardware/esp32/.../boot_app0.bin&quot;</span>
+<span class="w">  </span>0x10000<span class="w"> </span><span class="s2">&quot;/Users/YourName/Library/Caches/arduino/sketches/.../myProject.ino.bin&quot;</span>
+</pre></div>
+</div>
+<p>Here, each <strong>offset</strong> is followed by the corresponding <cite>.bin</cite> file:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">0x0</span></code> – Bootloader (<code class="docutils literal notranslate"><span class="pre">.bootloader.bin</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">0x8000</span></code> – Partition table (<code class="docutils literal notranslate"><span class="pre">.partitions.bin</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">0xe000</span></code> – Boot App (<code class="docutils literal notranslate"><span class="pre">boot_app0.bin</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">0x10000</span></code> – Main application firmware (<code class="docutils literal notranslate"><span class="pre">myProject.ino.bin</span></code>)</p></li>
+</ul>
+<p>You can also copy these <cite>.bin</cite> files from their listed paths to your SD card folder, making sure they follow the naming rules below.</p>
+</section>
+<section id="file-naming-requirements">
+<h2>File Naming Requirements<a class="headerlink" href="#file-naming-requirements" title="Permalink to this heading"></a></h2>
+<p>When you select a folder on the SD card, the code checks for specific <strong>keywords</strong> in the filenames to identify each file type. This is how it knows which files to flash and their intended purpose.</p>
+</section>
+<section id="required-files">
+<h2>Required Files<a class="headerlink" href="#required-files" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>Bootloader</strong>
+- Must contain the substring <code class="docutils literal notranslate"><span class="pre">bootloader</span></code> in its filename.
+- Examples: <code class="docutils literal notranslate"><span class="pre">bootloader_s3.bin</span></code>, <code class="docutils literal notranslate"><span class="pre">mybootloader.bin</span></code>.</p></li>
+<li><p><strong>Partition Table</strong>
+- Must contain the substring <code class="docutils literal notranslate"><span class="pre">partitions</span></code> in its filename.
+- Examples: <code class="docutils literal notranslate"><span class="pre">partitions.bin</span></code>, <code class="docutils literal notranslate"><span class="pre">partitions_custom.bin</span></code>.</p></li>
+<li><p><strong>Main Firmware</strong>
+- Must contain either <code class="docutils literal notranslate"><span class="pre">.ino.bin</span></code> (e.g., <code class="docutils literal notranslate"><span class="pre">mySketch.ino.bin</span></code>) <strong>or</strong> <code class="docutils literal notranslate"><span class="pre">esp32.bin</span></code> (e.g., <code class="docutils literal notranslate"><span class="pre">myFirmware_esp32.bin</span></code>) in its name.
+- If either substring is detected, it’s assumed to be the <strong>main application</strong>.</p></li>
+<li><p><strong>Boot App</strong>
+- Must contain the substring <code class="docutils literal notranslate"><span class="pre">boot_app</span></code> in its filename.
+- Example: <code class="docutils literal notranslate"><span class="pre">boot_app0.bin</span></code>.</p></li>
+<li><p><strong>SPIFFS (Optional)</strong>
+- Must contain the substring <code class="docutils literal notranslate"><span class="pre">spiffs.bin</span></code> (e.g., <code class="docutils literal notranslate"><span class="pre">myData_spiffs.bin</span></code>).
+- If present, SPIFFS will be flashed using the offset in <code class="docutils literal notranslate"><span class="pre">config.txt</span></code>.
+- If missing, SPIFFS flashing is skipped.</p></li>
+<li><p><strong>Configuration File</strong>
+- Must be named exactly <code class="docutils literal notranslate"><span class="pre">config.txt</span></code>.
+- Includes key-value pairs for each file’s flash offset (e.g., <code class="docutils literal notranslate"><span class="pre">bootloaderNameOffset=0x0</span></code>).
+- If this is missing, the flasher will not proceed.</p></li>
+</ol>
+</section>
+<section id="example-folder-layout">
+<h2>Example Folder Layout<a class="headerlink" href="#example-folder-layout" title="Permalink to this heading"></a></h2>
+<p>A typical folder might look like this:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>/MyFirmwareFolder
+├─ config.txt
+├─ boot_app0.bin
+├─ bootloader_s3.bin
+├─ partitions_custom.bin
+├─ mySketch.ino.bin
+├─ myData_spiffs.bin
+</pre></div>
+</div>
+<p>Where:</p>
+<ul class="simple">
+<li><p><strong>boot_app0.bin</strong> has <code class="docutils literal notranslate"><span class="pre">boot_app</span></code></p></li>
+<li><p><strong>bootloader_s3.bin</strong> has <code class="docutils literal notranslate"><span class="pre">bootloader</span></code></p></li>
+<li><p><strong>partitions_custom.bin</strong> has <code class="docutils literal notranslate"><span class="pre">partitions</span></code></p></li>
+<li><p><strong>mySketch.ino.bin</strong> has <code class="docutils literal notranslate"><span class="pre">.ino.bin</span></code></p></li>
+<li><p><strong>myData_spiffs.bin</strong> has <code class="docutils literal notranslate"><span class="pre">spiffs.bin</span></code></p></li>
+<li><p><strong>config.txt</strong> defines the offsets.</p></li>
+</ul>
+<img alt="_images/programmerFolders.png" src="_images/programmerFolders.png" />
+</section>
+<section id="connection-basics">
+<h2>Connection Basics<a class="headerlink" href="#connection-basics" title="Permalink to this heading"></a></h2>
+<p>For minimal hookup, simply connect the vPlayer device to your target ESP32’s TX and RX pins.
+If you want automated programming (i.e., toggling the ESP32 into bootloader mode without manual intervention),
+you can add code to drive the BOOT and RESET lines directly—vPlayer has extra I/O pins available for this purpose.
+However, for a basic setup, you only need:</p>
+<ol class="arabic simple">
+<li><p>TX (vPlayer) -&gt; RX (ESP32)</p></li>
+<li><p>RX (vPlayer) -&gt; TX (ESP32)</p></li>
+<li><p>GND (shared between vPlayer and ESP32)</p></li>
+</ol>
+<p>To enter the bootloader manually:</p>
+<ul class="simple">
+<li><p>Hold the <strong>BOOT</strong> pin low,</p></li>
+<li><p>Then toggle <strong>RESET</strong> or power cycle the ESP32 while BOOT is held low.</p></li>
+</ul>
+<img alt="_images/ProgrammerWiring.png" src="_images/ProgrammerWiring.png" />
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="webcamViewer.html" class="btn btn-neutral float-left" title="Traffic/Webcam Viewer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, KD CIRCUITS.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

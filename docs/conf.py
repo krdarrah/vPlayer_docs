@@ -7,7 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'vPlayer'
-copyright = '2024, KD CIRCUITS'
+copyright = '2025, KD CIRCUITS'
 author = 'KD CIRCUITS'
 release = 'v1.0'
 
