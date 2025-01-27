@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Video Player Project &mdash; vPlayer v1.0 documentation</title>
+  <title>National Debt Tracker &mdash; vPlayer v1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
 
@@ -19,7 +19,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Knowledgebase" href="hardware.html" /> 
+    <link rel="prev" title="Video Player Project" href="videoPlayer.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -44,7 +44,8 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="hardware.html">Knowledgebase</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Video Player Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="videoPlayer.html">Video Player Project</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">National Debt Tracker</a></li>
 </ul>
 
         </div>
@@ -61,9 +62,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Video Player Project</li>
+      <li class="breadcrumb-item active">National Debt Tracker</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/videoPlayer.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/nationalDebtTracker.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -71,30 +72,15 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="video-player-project">
-<span id="id1"></span><h1>Video Player Project<a class="headerlink" href="#video-player-project" title="Permalink to this heading"></a></h1>
-<img alt="_images/videoPlayer.jpg" src="_images/videoPlayer.jpg" />
-<p>This is the code that the board ships with!</p>
-<p>But how to load your own files?</p>
-<p>They need to be a specific format “.mjpeg” - I use ffmpeg for this. Here is the full command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ffmpeg<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;inputPath&quot;</span><span class="w"> </span>-vf<span class="w"> </span><span class="s2">&quot;fps=18,scale=-1:240:flags=lanczos,crop=280:240:(iw-280)/2:0,transpose=1&quot;</span><span class="w"> </span>-pix_fmt<span class="w"> </span>yuvj420p<span class="w"> </span>-q:v<span class="w"> </span><span class="m">4</span><span class="w"> </span>-vcodec<span class="w"> </span>mjpeg<span class="w"> </span>-f<span class="w"> </span>segment<span class="w"> </span>-segment_time<span class="w"> </span><span class="m">1800</span><span class="w"> </span>-reset_timestamps<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="s2">&quot;outputPattern&quot;</span>
-</pre></div>
-</div>
-<p>But the good news is that I created a simple app for Windows/Mac to do this automatically. Just place all of your <strong>.mp4</strong> files in a folder, run the app and it will take care of the rest. Copy those .mjpeg files to your SD card.</p>
-<p>You can download the video converter tool for Windows/Mac from the following link:</p>
-<p><a class="reference external" href="https://drive.google.com/drive/folders/1YtBq8pfR8KcjOuG6_Y1BZHH5BGuvwLpg?usp=sharing">Download the Converter</a></p>
-<img alt="_images/converter.png" src="_images/converter.png" />
-<p><strong>Source Code &amp; .bin file</strong>
-<a class="reference external" href="https://github.com/krdarrah/vPlayer_VideoPlayer">GitHub</a></p>
-<p><strong>Want it to just play automatically?  A lot of people asked for this, here is that code.  You can just go to releases and download the bin file for that, drop on the SD card and boot up and wait…</strong>
-<a class="reference external" href="https://github.com/krdarrah/vPlayer_VideoPlayer_AutoPlay">GitHub</a></p>
+  <section id="national-debt-tracker">
+<span id="nationaldebttracker"></span><h1>National Debt Tracker<a class="headerlink" href="#national-debt-tracker" title="Permalink to this heading"></a></h1>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="hardware.html" class="btn btn-neutral float-left" title="Knowledgebase" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="videoPlayer.html" class="btn btn-neutral float-left" title="Video Player Project" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

@@ -73,4 +73,6 @@ Start creating your own high-tech projects now!
    
    hardware
    videoPlayer
+   videoPlayer_Folder
+   webcamViewer
 
