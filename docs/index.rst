@@ -76,4 +76,5 @@ Start creating your own high-tech projects now!
    videoPlayer_Folder
    webcamViewer
    espProgrammer
+   dalle
 
