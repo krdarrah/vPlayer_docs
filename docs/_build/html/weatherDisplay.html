@@ -50,10 +50,12 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Weather Display</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#what-this-firmware-does">What This Firmware Does</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#first-time-setup">First-Time Setup</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#prepare-sd-card-settings-file">Prepare SD card settings file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#get-a-weatherapi-key">1) Get a WeatherAPI key</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#prepare-sd-card-settings-file">2) Prepare SD card settings file</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#screen-views">Screen Views</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#firmware-update-from-main-vplayer-firmware">Firmware Update (from main vPlayer firmware)</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="nationalDebtTracker.html">National Debt Tracker</a></li>
@@ -88,7 +90,7 @@
              
   <section id="weather-display">
 <span id="weather-display-project"></span><h1>Weather Display<a class="headerlink" href="#weather-display" title="Permalink to this heading"></a></h1>
-<img alt="_images/weatherImage.jpg" src="_images/weatherImage.jpg" />
+<img alt="vPlayer Weather Display" src="_images/weatherImage.jpg" />
 <p>This project turns the vPlayer into a compact weather dashboard using WeatherAPI data over Wi-Fi.</p>
 <section id="what-this-firmware-does">
 <h2>What This Firmware Does<a class="headerlink" href="#what-this-firmware-does" title="Permalink to this heading"></a></h2>
@@ -108,8 +110,12 @@
 </section>
 <section id="first-time-setup">
 <h2>First-Time Setup<a class="headerlink" href="#first-time-setup" title="Permalink to this heading"></a></h2>
+<section id="get-a-weatherapi-key">
+<h3>1) Get a WeatherAPI key<a class="headerlink" href="#get-a-weatherapi-key" title="Permalink to this heading"></a></h3>
+<p>Create a free account at <a class="reference external" href="https://www.weatherapi.com/">WeatherAPI</a> and copy your API key from your dashboard.</p>
+</section>
 <section id="prepare-sd-card-settings-file">
-<h3>Prepare SD card settings file<a class="headerlink" href="#prepare-sd-card-settings-file" title="Permalink to this heading"></a></h3>
+<h3>2) Prepare SD card settings file<a class="headerlink" href="#prepare-sd-card-settings-file" title="Permalink to this heading"></a></h3>
 <p>Create <code class="docutils literal notranslate"><span class="pre">/settings.txt</span></code> in SD card root with exactly 4 lines:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">YOUR_WIFI_SSID</span>
 <span class="n">YOUR_WIFI_PASSWORD</span>
@@ -124,6 +130,7 @@
 <span class="mi">90210</span>
 </pre></div>
 </div>
+<p>Keep your API key private and do not commit it to GitHub.</p>
 </section>
 </section>
 <section id="screen-views">
@@ -136,13 +143,15 @@
 <li><p>Tomorrow high/low</p></li>
 <li><p>Tomorrow rain %</p></li>
 </ol>
-<hr class="docutils" />
-<p>The main vPlayer firmware can update this weather firmware automatically:</p>
+</section>
+<section id="firmware-update-from-main-vplayer-firmware">
+<h2>Firmware Update (from main vPlayer firmware)<a class="headerlink" href="#firmware-update-from-main-vplayer-firmware" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
-<li><p>Download weather image from GitHub Releases  <a class="reference external" href="https://github.com/krdarrah/vPlayer_Weather/releases">vPlayer Weather Releases</a></p></li>
-<li><p>Save it to SD root as <code class="docutils literal notranslate"><span class="pre">/firmware.bin</span></code></p></li>
+<li><p>Download weather firmware from <a class="reference external" href="https://github.com/krdarrah/vPlayer_Weather/releases">vPlayer Weather Releases</a></p></li>
+<li><p>Or use direct latest asset: <a class="reference external" href="https://github.com/krdarrah/vPlayer_Weather/releases/latest/download/firmware.bin">Latest firmware.bin</a></p></li>
+<li><p>Save the file to SD root as <code class="docutils literal notranslate"><span class="pre">/firmware.bin</span></code></p></li>
 <li><p>Reboot board (or reboot into weather firmware)</p></li>
-<li><p>Weather firmware detects <code class="docutils literal notranslate"><span class="pre">/firmware.bin</span></code>, flashes it, removes file, and reboots</p></li>
+<li><p>Weather firmware detects <code class="docutils literal notranslate"><span class="pre">/firmware.bin</span></code>, flashes it, removes it, and reboots</p></li>
 </ol>
 <p>If successful, serial output includes:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Firmware update completed successfully!
