@@ -16,7 +16,7 @@ The vPlayer is the ultimate 1.69" Touch Screen (smart watch sized) ESP32-S3 base
 
 :ref:`Continuous video player <video_player_project>` take any video files you can think of and it will just play those endlessly from an SD card! This is my go-to for gifts. I have one that is just simple decoration that plays Christmas movie clips... about 100 of them! Also, I have one that plays retro video game play throughs - that's my favorite! Oh! and for business gifts, I animate their logo or marketing material from their site that plays continuously. NOTE! I have created my own software to convert .mp4 files to mjpeg at the exact resolution and frame rate. See the docs for more info.
 
-**Weather Display** This is pretty much the "Hello World" of IoT displays, but it really is useful to have on the night stand so first thing I see when I get ready for the day is what the hi/lo is for the day and if it's going to rain... perfect thing for figuring out what to wear! And in my code I also show the forecast for the next day as well, so you know also before bed what it's lookin like.
+:ref:`Weather Display <weather_display_project>` This is pretty much the "Hello World" of IoT displays, but it really is useful to have on the night stand so first thing I see when I get ready for the day is what the hi/lo is for the day and if it's going to rain... perfect thing for figuring out what to wear! And in my code I also show the forecast for the next day as well, so you know also before bed what it's lookin like.
 
 **Live Traffic Camera Display - or really any webcam** This one really cool if you can find traffic cameras along your commute. You can basically check road conditions/weather/traffic/etc... at a glance. And it's so simple to setup, just pop your WiFI credentials and a list of all the traffic cam URLS in a text file - pop that in the SD card and you're good to go. I also found cameras overlooking Lake Erie (close to me) so can check boating conditions as well. Lots of possibilities with this one... can you imagine creating a grid of vPlayer boards all with this code loaded up?
 
@@ -74,7 +74,8 @@ Start creating your own high-tech projects now!
    hardware
    videoPlayer
    videoPlayer_Folder
+   weatherDisplay
+   nationalDebtTracker
    webcamViewer
    espProgrammer
    dalle
-

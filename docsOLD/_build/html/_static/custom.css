@@ -1,0 +1,16 @@
+/* Customize sidebar color */
+.wy-side-nav-search {
+    background-color: #282c34;
+    color: white;
+}
+
+/* Change link colors */
+a {
+    color: #61dafb;
+}
+
+/* Style headings */
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}

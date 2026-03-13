@@ -1,0 +1,264 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI (Dalle) Image Generator &mdash; vPlayer v1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=99a04888"></script>
+      <script src="_static/doctools.js?v=888ff710"></script>
+      <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="ESP32 Programmer" href="espProgrammer.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html">
+            
+              <img src="_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="hardware.html">Knowledgebase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="videoPlayer.html">Video Player Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="videoPlayer_Folder.html">Video Player with Folders Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webcamViewer.html">Traffic/Webcam Viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="espProgrammer.html">ESP32 Programmer</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">AI (Dalle) Image Generator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#software-requirements">Software Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setup-instructions">Setup Instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#obtaining-an-api-key">Obtaining an API Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#functionality-breakdown">Functionality Breakdown</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#wifi-connection-handling">WiFi Connection Handling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#image-download-and-storage">Image Download and Storage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#image-display">Image Display</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#auto-refresh">Auto-Refresh</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#wifi-connection-issues">WiFi Connection Issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#api-key-errors">API Key Errors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sd-card-not-detected">SD Card Not Detected</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#no-image-displayed">No Image Displayed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#source-code">Source Code</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">vPlayer</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">AI (Dalle) Image Generator</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/dalle.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ai-dalle-image-generator">
+<h1>AI (Dalle) Image Generator<a class="headerlink" href="#ai-dalle-image-generator" title="Permalink to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
+<p>The AI (Dalle) Image Generator is a project designed to fetch AI-generated images using OpenAI’s DALL-E model and display them on the vPlayer board. The system retrieves images from the internet via WiFi and stores them on an SD card for display. The user can configure the settings, including WiFi credentials, API key, and refresh interval, through a <code class="docutils literal notranslate"><span class="pre">settings.txt</span></code> file stored on the SD card.</p>
+</section>
+<section id="features">
+<h2>Features<a class="headerlink" href="#features" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Runs on the vPlayer board without requiring additional hardware.</p></li>
+<li><p>Connects to WiFi to download AI-generated images.</p></li>
+<li><p>Uses OpenAI’s DALL-E API to fetch images based on a prompt.</p></li>
+<li><p>Saves images as PNG files on an SD card.</p></li>
+<li><p>Displays images on the screen.</p></li>
+<li><p>Configurable settings via <code class="docutils literal notranslate"><span class="pre">settings.txt</span></code>.</p></li>
+<li><p>Auto-refresh feature to periodically update the displayed image. Can be $$$, so keep this in mind.  Once an hour would be a good start</p></li>
+</ul>
+</section>
+<section id="software-requirements">
+<h2>Software Requirements<a class="headerlink" href="#software-requirements" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>OpenAI API key</p></li>
+<li><p>Libraries:
+- <code class="docutils literal notranslate"><span class="pre">Arduino_GFX_Library.h</span></code> for display control
+- <code class="docutils literal notranslate"><span class="pre">PNGdec.h</span></code> for PNG decoding (v1.0.3)
+- <code class="docutils literal notranslate"><span class="pre">AIChatbot.h</span></code> for OpenAI API communication (modified included with source) <a class="reference external" href="https://github.com/bayeggex/Arduino-AI-Chat-Library">Original Source</a></p></li>
+</ul>
+</section>
+<section id="setup-instructions">
+<h2>Setup Instructions<a class="headerlink" href="#setup-instructions" title="Permalink to this heading"></a></h2>
+<ol class="arabic">
+<li><p><strong>Prepare the SD Card:</strong>
+- Format an SD card (FAT32 recommended).
+- Place a <code class="docutils literal notranslate"><span class="pre">settings.txt</span></code> file in the root directory of the SD card.</p></li>
+<li><p><strong>Configure ``settings.txt``:</strong>
+The settings file should contain the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">YOUR_SSID</span>
+<span class="n">YOUR_PASSWORD</span>
+<span class="n">YOUR_API_KEY</span>
+<span class="n">YOUR_PROMPT</span>
+<span class="n">YOUR_UPDATE_RATE</span> <span class="p">(</span><span class="n">SECONDS</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>YOUR_SSID</strong>: WiFi network name</p></li>
+<li><p><strong>YOUR_PASSWORD</strong>: WiFi password</p></li>
+<li><p><strong>YOUR_API_KEY</strong>: OpenAI API key</p></li>
+<li><p><strong>YOUR_PROMPT</strong>: Text prompt for generating images “paint me a picture in stylel of Monet”</p></li>
+<li><p><strong>YOUR_UPDATE_RATE (SECONDS)</strong>: Interval for refreshing images (API usage costs may apply)</p></li>
+</ul>
+</li>
+<li><p><strong>Run the System:</strong>
+- Insert the SD card into the vPlayer board.
+- Power on the board.
+- The system will load settings from the SD card, connect to WiFi, fetch an AI-generated image, and display it on the screen.
+- The image will be updated based on the defined refresh interval.</p></li>
+</ol>
+</section>
+<section id="obtaining-an-api-key">
+<h2>Obtaining an API Key<a class="headerlink" href="#obtaining-an-api-key" title="Permalink to this heading"></a></h2>
+<p>To use OpenAI’s image generation API, you need an API key:
+1. Visit <a class="reference external" href="https://platform.openai.com/login">OpenAI’s API page</a>.
+2. Sign up or log in.
+3. Navigate to the API section and generate an API key.
+4. Copy the key and paste it into the <code class="docutils literal notranslate"><span class="pre">settings.txt</span></code> file on the SD card.</p>
+</section>
+<section id="functionality-breakdown">
+<h2>Functionality Breakdown<a class="headerlink" href="#functionality-breakdown" title="Permalink to this heading"></a></h2>
+<section id="wifi-connection-handling">
+<h3>WiFi Connection Handling<a class="headerlink" href="#wifi-connection-handling" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Ensures the device stays connected to WiFi.</p></li>
+<li><p>Reconnects if the connection is lost.</p></li>
+</ul>
+</section>
+<section id="image-download-and-storage">
+<h3>Image Download and Storage<a class="headerlink" href="#image-download-and-storage" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Fetches a PNG image URL using OpenAI’s API.</p></li>
+<li><p>Downloads and saves the image on the SD card.</p></li>
+</ul>
+</section>
+<section id="image-display">
+<h3>Image Display<a class="headerlink" href="#image-display" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Loads the saved PNG from the SD card.</p></li>
+<li><p>Decodes and renders it onto the screen.</p></li>
+</ul>
+</section>
+<section id="auto-refresh">
+<h3>Auto-Refresh<a class="headerlink" href="#auto-refresh" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Periodically fetches a new image based on the configured update interval.</p></li>
+</ul>
+</section>
+</section>
+<section id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this heading"></a></h2>
+<section id="wifi-connection-issues">
+<h3>WiFi Connection Issues<a class="headerlink" href="#wifi-connection-issues" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Ensure the SSID and password are correctly set in <code class="docutils literal notranslate"><span class="pre">settings.txt</span></code>.</p></li>
+<li><p>Check if the router allows connections from new devices.</p></li>
+</ul>
+</section>
+<section id="api-key-errors">
+<h3>API Key Errors<a class="headerlink" href="#api-key-errors" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Verify that the API key is valid and has sufficient quota.</p></li>
+<li><p>Ensure there are no extra spaces or newline characters in <code class="docutils literal notranslate"><span class="pre">settings.txt</span></code>.</p></li>
+</ul>
+</section>
+<section id="sd-card-not-detected">
+<h3>SD Card Not Detected<a class="headerlink" href="#sd-card-not-detected" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Ensure the SD card is properly inserted.</p></li>
+<li><p>Try formatting the card as FAT32.</p></li>
+</ul>
+</section>
+<section id="no-image-displayed">
+<h3>No Image Displayed<a class="headerlink" href="#no-image-displayed" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Check if the image file exists on the SD card (<code class="docutils literal notranslate"><span class="pre">/image.png</span></code>).</p></li>
+<li><p>Ensure the vPlayer board is properly powered.</p></li>
+<li><p>Verify that the power supply is sufficient for the board.</p></li>
+</ul>
+</section>
+</section>
+<section id="source-code">
+<h2>Source Code<a class="headerlink" href="#source-code" title="Permalink to this heading"></a></h2>
+<p><a class="reference external" href="https://github.com/krdarrah/vPlayer_Dalle">Github page</a>  You can also drop that firmware.bin file on your sd card and the vPlayer will automatically update to this firmware</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="espProgrammer.html" class="btn btn-neutral float-left" title="ESP32 Programmer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, KD CIRCUITS.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

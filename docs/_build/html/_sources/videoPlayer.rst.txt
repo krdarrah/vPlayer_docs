@@ -24,8 +24,7 @@ You can download the video converter tool for Windows/Mac from the following lin
 .. image:: images/converter.png
 
 **Source Code & .bin file**
-`GitHub <https://github.com/krdarrah/vPlayer_VideoPlayer>`_
+`GitHub (Video Player) <https://github.com/krdarrah/vPlayer_VideoPlayer>`_
 
 **Want it to just play automatically?  A lot of people asked for this, here is that code.  You can just go to releases and download the bin file for that, drop on the SD card and boot up and wait...**
-`GitHub <https://github.com/krdarrah/vPlayer_VideoPlayer_AutoPlay>`_
-
+`GitHub (AutoPlay) <https://github.com/krdarrah/vPlayer_VideoPlayer_AutoPlay>`_

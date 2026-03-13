@@ -1,0 +1,185 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Display &mdash; vPlayer v1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=99a04888"></script>
+      <script src="_static/doctools.js?v=888ff710"></script>
+      <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="National Debt Tracker" href="nationalDebtTracker.html" />
+    <link rel="prev" title="Video Player with Folders Project" href="videoPlayer_Folder.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html">
+            
+              <img src="_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="hardware.html">Knowledgebase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="videoPlayer.html">Video Player Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="videoPlayer_Folder.html">Video Player with Folders Project</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Weather Display</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-this-firmware-does">What This Firmware Does</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#first-time-setup">First-Time Setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#prepare-sd-card-settings-file">Prepare SD card settings file</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#screen-views">Screen Views</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nationalDebtTracker.html">National Debt Tracker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webcamViewer.html">Traffic/Webcam Viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="espProgrammer.html">ESP32 Programmer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dalle.html">AI (Dalle) Image Generator</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">vPlayer</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Weather Display</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/weatherDisplay.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="weather-display">
+<span id="weather-display-project"></span><h1>Weather Display<a class="headerlink" href="#weather-display" title="Permalink to this heading"></a></h1>
+<img alt="_images/weatherImage.jpg" src="_images/weatherImage.jpg" />
+<p>This project turns the vPlayer into a compact weather dashboard using WeatherAPI data over Wi-Fi.</p>
+<section id="what-this-firmware-does">
+<h2>What This Firmware Does<a class="headerlink" href="#what-this-firmware-does" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Shows current temperature + weather icon</p></li>
+<li><p>Shows today and tomorrow forecast:</p>
+<ul>
+<li><p>high/low temperatures</p></li>
+<li><p>rain chance</p></li>
+<li><p>condition icons</p></li>
+</ul>
+</li>
+<li><p>Rotates through 5 views automatically (every 3 seconds)</p></li>
+<li><p>Reads Wi-Fi + API settings from SD card</p></li>
+<li><p>Supports boot-time self-update from <code class="docutils literal notranslate"><span class="pre">/firmware.bin</span></code> on SD card</p></li>
+</ul>
+</section>
+<section id="first-time-setup">
+<h2>First-Time Setup<a class="headerlink" href="#first-time-setup" title="Permalink to this heading"></a></h2>
+<section id="prepare-sd-card-settings-file">
+<h3>Prepare SD card settings file<a class="headerlink" href="#prepare-sd-card-settings-file" title="Permalink to this heading"></a></h3>
+<p>Create <code class="docutils literal notranslate"><span class="pre">/settings.txt</span></code> in SD card root with exactly 4 lines:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">YOUR_WIFI_SSID</span>
+<span class="n">YOUR_WIFI_PASSWORD</span>
+<span class="n">YOUR_WEATHERAPI_KEY</span>
+<span class="n">YOUR_ZIP_CODE</span>
+</pre></div>
+</div>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MyWiFi</span>
+<span class="n">mySecretPass</span>
+<span class="n">abc123weatherapikey</span>
+<span class="mi">90210</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="screen-views">
+<h2>Screen Views<a class="headerlink" href="#screen-views" title="Permalink to this heading"></a></h2>
+<p>The display cycles through:</p>
+<ol class="arabic simple">
+<li><p>Current temp</p></li>
+<li><p>Today high/low</p></li>
+<li><p>Today rain %</p></li>
+<li><p>Tomorrow high/low</p></li>
+<li><p>Tomorrow rain %</p></li>
+</ol>
+<hr class="docutils" />
+<p>The main vPlayer firmware can update this weather firmware automatically:</p>
+<ol class="arabic simple">
+<li><p>Download weather image from GitHub Releases  <a class="reference external" href="https://github.com/krdarrah/vPlayer_Weather/releases">vPlayer Weather Releases</a></p></li>
+<li><p>Save it to SD root as <code class="docutils literal notranslate"><span class="pre">/firmware.bin</span></code></p></li>
+<li><p>Reboot board (or reboot into weather firmware)</p></li>
+<li><p>Weather firmware detects <code class="docutils literal notranslate"><span class="pre">/firmware.bin</span></code>, flashes it, removes file, and reboots</p></li>
+</ol>
+<p>If successful, serial output includes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Firmware update completed successfully!
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="videoPlayer_Folder.html" class="btn btn-neutral float-left" title="Video Player with Folders Project" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="nationalDebtTracker.html" class="btn btn-neutral float-right" title="National Debt Tracker" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, KD CIRCUITS.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
